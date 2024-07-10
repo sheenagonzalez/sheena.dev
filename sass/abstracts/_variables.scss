@@ -1,0 +1,77 @@
+//Breakpoints
+$breakpoints: (
+  "xs": (
+    min-width: 0,
+  ),
+  "sm": (
+    min-width: 576px,
+  ),
+  "md": (
+    min-width: 768px,
+  ),
+  "lg": (
+    min-width: 992px,
+  ),
+  "xl": (
+    min-width: 1200px,
+  ),
+  "xxl": (
+    min-width: 1400px,
+  ),
+  "xxxl": (
+    min-width: 2400px,
+  ),
+  "4xl": (
+    min-width: 3200px,
+  ),
+);
+
+//Colors
+$color-primary: #b8c1ec;
+$color-primary-light: #90a2fb;
+$color-primary-dark: #4b4e75;
+$color-secondary: #fec7d7;
+$color-secondary-dark: #eebbc3;
+$color-accent: #f2c94c;
+$color-bar: #4b4e75;
+$color-red: #cc5858;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-alt-black: #121629;
+$color-dark: #232946;
+$color-light: #fffafa;
+$color-link: #a786df;
+$color-proj1a: #384a7c;
+$color-proj1b: #4b5c92;
+$color-proj2a: #335465;
+$color-proj2b: #baced1;
+$color-proj3a: #353638;
+$color-proj3b: #fbde64;
+
+//Containers
+$container-max-widths: (
+  "sm": 540px,
+  "md": 720px,
+  "lg": 960px,
+  "xl": 1140px,
+  "xxl": 1320px,
+);
+
+//Z-index
+$zindex-dropdown: 1000;
+$zindex-sticky: 1020;
+$zindex-fixed: 1030;
+$zindex-modal-backdrop: 1040;
+$zindex-offcanvas: 1050;
+$zindex-modal: 1060;
+$zindex-popover: 1070;
+$zindex-tooltip: 1080;
+
+//Buttons
+$stripe-height: 7px;
+$btn-color: $color-dark;
+$btn-background: $color-primary;
+$btn-color-hover: $color-light;
+$btn-background-hover: $color-primary-dark;
+$border-color: $color-dark;
+$border-color-hover: $color-alt-black;

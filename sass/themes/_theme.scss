@@ -1,0 +1,225 @@
+body {
+  background: $color-light;
+  color: $color-alt-black;
+  transition: background 0.2s linear;
+  &.dark-mode {
+    background: $color-dark;
+    color: $color-light;
+    a {
+      color: $color-light;
+    }
+    button,
+    .btn {
+      background-color: $color-secondary-dark;
+      &:hover {
+        color: $color-dark;
+        background-color: $color-accent;
+        &:after {
+          background-image: repeating-linear-gradient(
+            45deg,
+            $color-dark,
+            $color-dark 1px,
+            transparent 2px,
+            transparent 5px
+          );
+        }
+      }
+    }
+    .btn--solid {
+      color: $color-dark;
+      background-color: $color-secondary-dark;
+    }
+    .site-navigation {
+      background-color: $color-dark;
+      &__bg {
+        background-color: $color-dark;
+      }
+      .theme-toggle {
+        &__input:hover {
+          &:checked + .theme-toggle__label {
+            background-color: $color-alt-black;
+            color: $color-accent;
+          }
+        }
+      }
+      .menu__list {
+        background-color: $color-dark;
+      }
+    }
+    .home-header {
+      background-color: #c24a5d;
+      &__character-simplified {
+        &--light {
+          display: none;
+        }
+        &--dark {
+          display: block;
+        }
+      }
+      &__speech-bubble {
+        background-color: $color-dark;
+        color: $color-light;
+        &-tail {
+          color: $color-dark;
+        }
+      }
+      * {
+        stroke-width: 2;
+      }
+      &__ceiling * {
+        fill: $color-dark;
+      }
+      &__center-wall * {
+        fill: #a09bd0;
+      }
+      &__side-wall * {
+        fill: #7e78a5;
+      }
+      &__floor {
+        :first-child {
+          fill: #dd6c87;
+        }
+        :last-child {
+          fill: #c24a5d;
+        }
+      }
+      &__cabinet {
+        &--ball {
+          fill: #644fa0;
+        }
+        &--outer {
+          fill: #9483c2;
+        }
+        &--inner {
+          fill: #3c2b60;
+        }
+      }
+      &__lamp {
+        &--shade {
+          fill: #efe0d5;
+        }
+        &--stem,
+        &--bottom {
+          fill: #484193;
+        }
+        &--surface {
+          fill: #7a68ac;
+        }
+      }
+      &__desk {
+        &--screen {
+          display: none;
+        }
+        &--sticky-a {
+          fill: #dd6c87;
+        }
+        &--sticky-b {
+          fill: #4b4e75;
+        }
+        &--keyboard,
+        &--mouse,
+        &--drawer {
+          fill: #b6a3dd;
+        }
+        &--mousepad {
+          fill: #6960a0;
+        }
+        &--back,
+        &--drawer-handle {
+          fill: #3c2b60;
+        }
+        &--pillar {
+          fill: #493779;
+        }
+        &--tabletop {
+          fill: #9483c2;
+        }
+      }
+      &__wall-decor {
+        &--poster {
+          &-dark {
+            fill: #3c2b60;
+          }
+          &-light {
+            fill: #7a68ac;
+          }
+        }
+        &--paper {
+          fill: #dabeab;
+        }
+      }
+      &__plant {
+        &--leaf * {
+          fill: #156874;
+        }
+        &--pot * {
+          fill: #4b4e75;
+        }
+      }
+    }
+    .clients {
+      &__logos a {
+        &:nth-child(2),
+        &:nth-child(3) {
+          filter: invert(1) brightness(100%) saturate(0);
+        }
+        &:first-child,
+        &:nth-child(4),
+        &:nth-child(5),
+        &:last-child {
+          filter: grayscale(100%) brightness(0%) invert(1);
+        }
+        &:hover {
+          &:nth-child(2),
+          &:nth-child(3) {
+            filter: invert(1) brightness(50%) sepia(1) hue-rotate(8deg)
+              saturate(184%) brightness(131%);
+          }
+          &:first-child,
+          &:nth-child(4),
+          &:nth-child(5),
+          &:last-child {
+            filter: brightness(0) invert(92%) sepia(54%) saturate(6417%)
+              hue-rotate(320deg) brightness(103%) contrast(90%);
+          }
+        }
+      }
+    }
+  }
+}
+@include respond-to("md") {
+  .dark-mode {
+    .home-header {
+      &__speech-bubble {
+        background-color: $color-secondary;
+        color: $color-light;
+      }
+      &__window {
+        &--sun {
+          display: none;
+        }
+        &--moon {
+          display: block;
+        }
+      }
+      &__btn:hover {
+        color: $color-light;
+      }
+    }
+  }
+}
+@include respond-to("lg") {
+  .dark-mode {
+    .site-navigation {
+      .menu__list {
+        background-color: $color-dark;
+        &-item {
+          border-bottom: 2px solid $color-accent;
+          &:hover > a {
+            color: $color-accent;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,165 @@
+//Fonts
+@mixin font-h1-bold {
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 120%;
+}
+@mixin font-h2-bold {
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 120%;
+}
+@mixin font-h3-bold {
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+}
+@mixin font-h4-bold {
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+}
+@mixin font-h5-bold {
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+}
+@mixin font-h6-bold {
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+}
+@mixin font-p1-medium {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  font-variation-settings: "slnt" 0;
+}
+@mixin font-p2-medium {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  font-variation-settings: "slnt" 0;
+}
+@mixin font-p3-medium {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  font-variation-settings: "slnt" 0;
+}
+@mixin font-p4-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  font-variation-settings: "slnt" 0;
+}
+@mixin font-c1-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  font-variation-settings: "slnt" 0;
+}
+@mixin font-c2-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  font-variation-settings: "slnt" 0;
+}
+@mixin font-c3-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 180%;
+  font-variation-settings: "slnt" 0;
+}
+@mixin font-label {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 140%;
+  font-variation-settings: "slnt" 0;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+}
+
+/// Responsive breakpoint manager
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == "string",
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+@mixin make-container($size) {
+  $raw-width: map-get($container-max-widths, $size);
+
+  @if $raw-width {
+    $width: if(
+      type-of($raw-width) == "string",
+      unquote($raw-width),
+      inspect($raw-width)
+    );
+    max-width: $width;
+  } @else {
+    max-width: none;
+    padding-right: $size;
+    padding-left: $size;
+  }
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
