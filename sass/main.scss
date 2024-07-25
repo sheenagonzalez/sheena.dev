@@ -13,24 +13,14 @@
 
 //Layout
 @import "layouts/_main-navigation";
-@import "layouts/_side-navigation";
 @import "layouts/_containers";
 @import "layouts/_footer";
 
 //Components
-@import "components/_cover";
-@import "components/_thumbnails";
 @import "components/_buttons";
 
 //Pages
 @import "pages/_home";
-@import "pages/_side-projects";
-@import "pages/_resume";
-@import "pages/_project-1";
-@import "pages/_project-2";
-@import "pages/_project-3";
-@import "pages/_project-4";
-@import "pages/_project-5";
 
 //Theme
 @import "themes/_theme";

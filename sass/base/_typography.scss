@@ -70,9 +70,20 @@ h6,
   @include font-h6-bold;
 }
 a {
-  text-decoration: underline;
-  color: $color-black;
+  text-decoration: inherit;
+  color: inherit;
+  &:hover {
+    color: inherit;
+  }
 }
-a:hover {
-  color: $color-link;
+p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+b {
+  font-weight: bold;
 }

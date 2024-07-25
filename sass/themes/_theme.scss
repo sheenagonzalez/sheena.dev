@@ -5,29 +5,24 @@ body {
   &.dark-mode {
     background: $color-dark;
     color: $color-light;
-    a {
-      color: $color-light;
-    }
-    button,
     .btn {
+      color: $color-dark;
       background-color: $color-secondary-dark;
       &:hover {
-        color: $color-dark;
         background-color: $color-accent;
         &:after {
           background-image: repeating-linear-gradient(
             45deg,
             $color-dark,
-            $color-dark 1px,
+            $color-dark 2px,
             transparent 2px,
             transparent 5px
           );
         }
       }
-    }
-    .btn--solid {
-      color: $color-dark;
-      background-color: $color-secondary-dark;
+      &-secondary {
+        color: $color-light;
+      }
     }
     .site-navigation {
       background-color: $color-dark;
@@ -185,6 +180,56 @@ body {
         }
       }
     }
+    .works {
+      .work {
+        &__img {
+          &--desktop,
+          &--mobile {
+            &.light {
+              display: none;
+            }
+            &.dark {
+              display: flex;
+            }
+          }
+        }
+        &__text {
+          &-bg {
+            background-color: $color-dark;
+          }
+        }
+        &#proj1,
+        &#proj2,
+        &#proj3 {
+          .work {
+            &__heading {
+              color: $color-light;
+            }
+            &__tool {
+              &-icon {
+                color: $color-light;
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer {
+      background-color: $color-alt-black;
+      box-shadow: inset $color-black 0px 0px 20px -12px;
+      &__logo,
+      &__copyright {
+        color: $color-light;
+      }
+      &__social {
+        &-img {
+          color: $color-light;
+          &:hover {
+            color: $color-accent;
+          }
+        }
+      }
+    }
   }
 }
 @include respond-to("md") {
@@ -202,7 +247,7 @@ body {
           display: block;
         }
       }
-      &__btn:hover {
+      &__btn {
         color: $color-light;
       }
     }
@@ -217,6 +262,15 @@ body {
           border-bottom: 2px solid $color-accent;
           &:hover > a {
             color: $color-accent;
+          }
+        }
+      }
+    }
+    .works {
+      .work {
+        &__text {
+          &-card {
+            background-color: $color-dark;
           }
         }
       }

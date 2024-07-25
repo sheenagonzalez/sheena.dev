@@ -11,7 +11,7 @@ body:nth-child(2) {
   color: $color-light;
   position: fixed;
   top: 0;
-  transition: top 0.3s;
+  transition: top 0.3s ease-in, color 0.5s ease-in;
   display: block;
   &__bg {
     width: 100%;
@@ -98,14 +98,17 @@ body:nth-child(2) {
       cursor: pointer;
       &:checked ~ .menu__btn > span {
         transform: rotate(45deg);
+        background-color: $color-light;
       }
       &:checked ~ .menu__btn > span::before {
         top: 0;
         transform: rotate(0);
+        background-color: $color-light;
       }
       &:checked ~ .menu__btn > span::after {
         top: 0;
         transform: rotate(90deg);
+        background-color: $color-light;
       }
       &:checked ~ .menu__list {
         visibility: visible;
@@ -130,6 +133,11 @@ body:nth-child(2) {
         height: 2px;
         background-color: $color-light;
         transition-duration: 0.25s;
+      }
+      & > .hamburger--dark,
+      & > .hamburger--dark::before,
+      & > .hamburger--dark::after {
+        background-color: $color-alt-black;
       }
       & > span::before {
         content: "";

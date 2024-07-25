@@ -33,7 +33,7 @@
       content="Sheena Gonzalez | Software Engineer &amp; Designer"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.sheena.dev/" />
+    <meta property="og:url" content="https://sheena.dev/" />
     <!-- <meta property="og:image" content="http://example.com/image.jpg" /> -->
     <meta
       property="og:description"
@@ -142,15 +142,17 @@
         <div class="menu">
           <input class="menu__toggle" id="menuButton" type="checkbox" />
           <label class="menu__btn" for="menu__toggle">
-            <span></span>
+            <span id="hamburgerMenu"></span>
           </label>
           <ul class="menu__list">
             <li class="menu__list-item"><a href="#works">Works</a></li>
             <li class="menu__list-item">
-              <a href="/side-projects">Side Projects</a>
+              <a href="https://sheenagonzalez.github.io/" target="_blank"
+                >2020 Archive</a
+              >
             </li>
             <li class="menu__list-item">
-              <a href="/resources/resume.pdf">Resume</a>
+              <a href="/resources/resume.pdf" target="_blank">Resume</a>
             </li>
           </ul>
         </div>
@@ -418,7 +420,7 @@
               />
             </svg>
           </div>
-          <a class="home-header__btn" href="#about">
+          <a class="home-header__btn" href="#clients">
             <span class="home-header__btn-label">Continue</span>
             <svg
               class="home-header__btn-icon"
@@ -945,7 +947,9 @@
             of experience creating websites, elevating brands and converting
             leads.
           </p>
-          <button class="about__btn btn" href="#works">Explore Work</button>
+          <a href="#works">
+            <button class="about__btn btn">Explore Work</button>
+          </a>
         </div>
         <div class="about-media">
           <svg
@@ -984,109 +988,454 @@
       </div>
     </section>
     <!-- Project Thumbnails / Directory -->
-    <!-- <section id="works">
-      <div class="works-list container--full">
-        <div class="works-list__item" id="proj1">
-          <div class="work-media">
-            <img
-              class="work-media__desktop"
-              src="./img/blissy/blissy-thumbnail-desktop.png"
-            />
-            <img
-              class="work-media__mobile"
-              src="./img/blissy/blissy-thumbnail-mobile.png"
-            />
-            </div>
+    <section class="works" id="works">
+      <div class="works__container container--full">
+        <div class="work" id="proj1">
+          <div class="work__img">
+            <picture class="work__img--desktop light">
+              <source
+                srcset="./img/blissy/blissy-thumbnail-2400px-light.png"
+                media="(min-width: 3200px)"
+              />
+              <source
+                srcset="./img/blissy/blissy-thumbnail-1600px-light.png"
+                media="(min-width: 1400px)"
+              />
+              <img
+                src="./img/blissy/blissy-thumbnail-1000px-light.png"
+                alt="Blissy desktop thumbnail"
+              />
+            </picture>
+            <picture class="work__img--desktop dark">
+              <source
+                srcset="./img/blissy/blissy-thumbnail-2400px-dark.png"
+                media="(min-width: 3200px)"
+              />
+              <source
+                srcset="./img/blissy/blissy-thumbnail-1600px-dark.png"
+                media="(min-width: 1400px)"
+              />
+              <img
+                src="./img/blissy/blissy-thumbnail-1000px-dark.png"
+                alt="Blissy desktop thumbnail"
+              />
+            </picture>
+            <picture class="work__img--mobile light">
+              <source
+                srcset="./img/blissy/blissy-thumbnail-600px-light.png"
+                media="(min-width: 2400px)"
+              />
+              <img
+                src="./img/blissy/blissy-thumbnail-300px-light.png"
+                alt="Blissy mobile thumbnail"
+              />
+            </picture>
+            <picture class="work__img--mobile dark">
+              <source
+                srcset="./img/blissy/blissy-thumbnail-600px-dark.png"
+                media="(min-width: 2400px)"
+              />
+              <img
+                src="./img/blissy/blissy-thumbnail-300px-dark.png"
+                alt="Blissy mobile thumbnail"
+              />
+            </picture>
           </div>
-          <div class="work-info">
-            <div class="work-info__holder">
-              <h2 class="work-info__title">
+          <div class="work__text-bg">
+            <div class="work__text-card">
+              <h2 class="work__heading h1">
                 <a href="/projects/1-blissy">Blissy</a>
               </h2>
-              <p class="work-info__description">
+              <p class="work__description" lang="de">
                 Blissy is an online store leading the silk revolution in luxury
-                wellness and beauty. I optimized their ecommerce systems to
-                increase customer engagement and conversion rates. Aside from
-                developing their Shopify site, I also built direct response
-                flows and marketing pages, including blog, custom emails,
-                interactive quizzes, and landing pages.
+                wellness and beauty. I built and optimized their ecommerce
+                systems to increase customer engagement and conversion rates.
+                Aside from developing their Shopify site, I also built direct
+                response flows and marketing pages, including blog, custom
+                emails, interactive quizzes, and landing pages. I also helped
+                launch over 100 new SKUs, collaborations with NBC and Marilyn
+                Monroe Estate, and other promotional sales for this globally
+                expanding business.
               </p>
-              <div class="work-info__meta">
-                <span class="work-info__meta--item"
+              <div class="work__subtext">
+                <span class="work__subtext-item"
                   ><b>Role:</b> Frontend Developer/Designer</span
                 >
-                <span class="work-info__meta--item"
+                <span class="work__subtext-item"
                   ><b>Company:</b> Blissy, LLC.</span
                 >
               </div>
-              <div class="work-info__tool-list">
-                <div class="work-info__tool-list--item">
-                  <svg class="work-info__tool-list--icon">
+              <div class="work__tool-list">
+                <span class="work__tools-heading"><b>Tools:</b></span>
+                <div class="work__tool-item">
+                  <svg class="work__tool-icon">
                     <use href="./img/icons/html5.svg#img"></use>
                   </svg>
-                  <span class="work-info__tool-list--tooltip">HTML5</span>
+                  <span class="work__tool-tooltip">HTML5</span>
                 </div>
-                <div class="work-info__tool-list--item">
-                  <svg class="work-info__tool-list--icon">
+                <div class="work__tool-item">
+                  <svg class="work__tool-icon">
                     <use href="./img/icons/css3.svg#img"></use>
                   </svg>
-                  <span class="work-info__tool-list--tooltip">CSS3</span>
+                  <span class="work__tool-tooltip">CSS3</span>
                 </div>
-                <div class="work-info__tool-list--item">
-                  <svg class="work-info__tool-list--icon">
+                <div class="work__tool-item">
+                  <svg class="work__tool-icon">
                     <use href="./img/icons/js.svg#img"></use>
                   </svg>
-                  <span class="work-info__tool-list--tooltip">JavaScript</span>
+                  <span class="work__tool-tooltip">JavaScript</span>
                 </div>
-                <div class="work-info__tool-list--item">
-                  <svg class="work-info__tool-list--icon">
+                <div class="work__tool-item">
+                  <svg class="work__tool-icon">
                     <use href="./img/icons/liquid.svg#img"></use>
                   </svg>
-                  <span class="work-info__tool-list--tooltip"
-                    >Shopify Liquid</span
-                  >
+                  <span class="work__tool-tooltip">Shopify Liquid</span>
                 </div>
-                <div class="work-info__tool-list--item">
-                  <svg class="work-info__tool-list--icon">
+                <div class="work__tool-item">
+                  <svg class="work__tool-icon">
                     <use href="./img/icons/webflow.svg#img"></use>
                   </svg>
-                  <span class="work-info__tool-list--tooltip">Webflow</span>
+                  <span class="work__tool-tooltip">Webflow</span>
                 </div>
-                <div class="work-info__tool-list--item">
-                  <svg class="work-info__tool-list--icon">
+                <div class="work__tool-item">
+                  <svg class="work__tool-icon">
                     <use href="./img/icons/figma.svg#img"></use>
                   </svg>
-                  <span class="work-info__tool-list--tooltip">Figma</span>
+                  <span class="work__tool-tooltip">Figma</span>
                 </div>
-                <div class="work-info__tool-list--item">
-                  <svg class="work-info__tool-list--icon">
+                <div class="work__tool-item">
+                  <svg class="work__tool-icon">
                     <use href="./img/icons/jquery.svg#img"></use>
                   </svg>
-                  <span class="work-info__tool-list--tooltip">jQuery</span>
+                  <span class="work__tool-tooltip">jQuery</span>
                 </div>
-                <div class="work-info__tool-list--item">
-                  <svg class="work-info__tool-list--icon">
+                <div class="work__tool-item">
+                  <svg class="work__tool-icon">
                     <use href="./img/icons/php.svg#img"></use>
                   </svg>
-                  <span class="work-info__tool-list--tooltip">PHP</span>
+                  <span class="work__tool-tooltip">PHP</span>
                 </div>
-                <div class="work-info__tool-list--item">
-                  <svg class="work-info__tool-list--icon">
+                <div class="work__tool-item">
+                  <svg class="work__tool-icon">
                     <use href="./img/icons/git.svg#img"></use>
                   </svg>
-                  <span class="work-info__tool-list--tooltip">Git</span>
+                  <span class="work__tool-tooltip">Git</span>
                 </div>
               </div>
             </div>
-            <div class="work-sample__actions">
-              <button class="work-sample__btn btn"></button>
+            <div class="work__actions">
+              <a
+                href="https://offer.blissy.com/checkout/checkout5-2s"
+                target="_blank"
+              >
+                <button class="work__action-btn btn">Visit Shop</button>
+              </a>
+              <a
+                href="https://blissy.com/blogs/the-blissy-blog"
+                target="_blank"
+              >
+                <button class="work__action-btn btn-secondary">
+                  View Blog
+                </button>
+              </a>
+              <a href="https://lp.blissyjunior.com" target="_blank">
+                <button class="work__action-btn btn-secondary">
+                  View Kids' Section
+                </button>
+              </a>
+              <a href="https://my.blissy.com/yuliia" target="_blank">
+                <button class="work__action-btn btn-secondary">
+                  View Influencer Page
+                </button>
+              </a>
+              <a
+                href="https://quiz-flow-test-0a2c2f.webflow.io"
+                target="_blank"
+              >
+                <button class="work__action-btn btn-secondary">
+                  View Interactive Quiz
+                </button>
+              </a>
             </div>
           </div>
-          <ul class="work-actions">
-            <li><a class="work-actions__item" href="">Visit Site</a></li>
-          </ul>
+        </div>
+        <div class="work" id="proj2">
+          <div class="work__img">
+            <picture class="work__img--desktop light">
+              <source
+                srcset="./img/nari/nari-thumbnail-2400px-light.png"
+                media="(min-width: 3200px)"
+              />
+              <source
+                srcset="./img/nari/nari-thumbnail-1600px-light.png"
+                media="(min-width: 1400px)"
+              />
+              <img
+                src="./img/nari/nari-thumbnail-1000px-light.png"
+                alt="NARI desktop thumbnail"
+              />
+            </picture>
+            <picture class="work__img--desktop dark">
+              <source
+                srcset="./img/nari/nari-thumbnail-2400px-dark.png"
+                media="(min-width: 3200px)"
+              />
+              <source
+                srcset="./img/nari/nari-thumbnail-1600px-dark.png"
+                media="(min-width: 1400px)"
+              />
+              <img
+                src="./img/nari/nari-thumbnail-1000px-dark.png"
+                alt="NARI desktop thumbnail"
+              />
+            </picture>
+          </div>
+          <div class="work__text-bg">
+            <div class="work__text-card">
+              <h2 class="work__heading h1">
+                <a href="/projects/2-nari">NARI</a>
+              </h2>
+              <p class="work__description" lang="de">
+                NASA Aeronautics Research Institute (NARI) needed a revamp of
+                their old website. I was hired by Marqui Labs as an intern to
+                build the redesign, with the objective of cleaning the layouts
+                and improving the overall accessibility of the site's features.
+                I modernized the design to fit an innovative look and put more
+                visibility to critical information such as upcoming events,
+                research, projects and initiatives. The internship was a
+                valuable learning experience that pivoted my career from UX
+                design to web development.
+              </p>
+              <div class="work__subtext">
+                <span class="work__subtext-item"
+                  ><b>Role:</b> Frontend Developer Intern</span
+                >
+                <span class="work__subtext-item"
+                  ><b>Company:</b> Marqui Labs</span
+                >
+              </div>
+              <div class="work__tool-list">
+                <span class="work__tools-heading"><b>Tools:</b></span>
+                <div class="work__tool-item">
+                  <svg class="work__tool-icon">
+                    <use href="./img/icons/vuejs.svg#img"></use>
+                  </svg>
+                  <span class="work__tool-tooltip">Vue.js</span>
+                </div>
+                <div class="work__tool-item">
+                  <svg class="work__tool-icon">
+                    <use href="./img/icons/nuxtjs.svg#img"></use>
+                  </svg>
+                  <span class="work__tool-tooltip">Nuxt 2</span>
+                </div>
+                <div class="work__tool-item">
+                  <svg class="work__tool-icon">
+                    <use href="./img/icons/nodejs.svg#img"></use>
+                  </svg>
+                  <span class="work__tool-tooltip">Node.s</span>
+                </div>
+                <div class="work__tool-item">
+                  <svg class="work__tool-icon">
+                    <use href="./img/icons/sass.svg#img"></use>
+                  </svg>
+                  <span class="work__tool-tooltip">SASS</span>
+                </div>
+                <div class="work__tool-item">
+                  <svg class="work__tool-icon">
+                    <use href="./img/icons/jamstack.svg#img"></use>
+                  </svg>
+                  <span class="work__tool-tooltip">Jamstack</span>
+                </div>
+                <div class="work__tool-item">
+                  <svg class="work__tool-icon">
+                    <use href="./img/icons/figma.svg#img"></use>
+                  </svg>
+                  <span class="work__tool-tooltip">Figma</span>
+                </div>
+                <div class="work__tool-item">
+                  <svg class="work__tool-icon">
+                    <use href="./img/icons/git.svg#img"></use>
+                  </svg>
+                  <span class="work__tool-tooltip">Git</span>
+                </div>
+              </div>
+            </div>
+            <div class="work__actions">
+              <a href="https://nari-prototype.netlify.app/" target="_blank">
+                <button class="work__action-btn btn">Visit Site</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="work" id="proj3">
+          <div class="work__img">
+            <picture class="work__img--desktop light">
+              <source
+                srcset="./img/inzalab/inzalab-thumbnail-2400px-light.png"
+                media="(min-width: 3200px)"
+              />
+              <source
+                srcset="./img/inzalab/inzalab-thumbnail-1600px-light.png"
+                media="(min-width: 1400px)"
+              />
+              <img
+                src="./img/inzalab/inzalab-thumbnail-1000px-light.png"
+                alt="inZaLab desktop thumbnail"
+              />
+            </picture>
+            <picture class="work__img--desktop dark">
+              <source
+                srcset="./img/inzalab/inzalab-thumbnail-2400px-dark.png"
+                media="(min-width: 3200px)"
+              />
+              <source
+                srcset="./img/inzalab/inzalab-thumbnail-1600px-dark.png"
+                media="(min-width: 1400px)"
+              />
+              <img
+                src="./img/inzalab/inzalab-thumbnail-1000px-dark.png"
+                alt="inZaLab desktop thumbnail"
+              />
+            </picture>
+            <picture class="work__img--mobile light">
+              <source
+                srcset="./img/inzalab/inzalab-thumbnail-600px-light.png"
+                media="(min-width: 2400px)"
+              />
+              <img
+                src="./img/inzalab/inzalab-thumbnail-300px-light.png"
+                alt="inZaLab mobile thumbnail"
+              />
+            </picture>
+            <picture class="work__img--mobile dark">
+              <source
+                srcset="./img/inzalab/inzalab-thumbnail-600px-dark.png"
+                media="(min-width: 2400px)"
+              />
+              <img
+                src="./img/inzalab/inzalab-thumbnail-300px-dark.png"
+                alt="inZaLab mobile thumbnail"
+              />
+            </picture>
+          </div>
+          <div class="work__text-bg">
+            <div class="work__text-card">
+              <h2 class="work__heading h1">
+                <a href="/projects/3-inzalab">inZaLab</a>
+              </h2>
+              <p class="work__description" lang="de">
+                InZaLab is a resourcing tool for brands to collect data related
+                to GenZ consumer trends. I was hired by Creative Digital Agency
+                to design inZaLab's brand new website. Using Figma, I completed
+                two prototypes, both web and mobile versions, packed with
+                interactive buttons and smooth animations. I also included a
+                style guide with comprehensive notes for the developer.
+                Additionally, I designed letterheads and press/media kits for
+                increased marketing efforts.
+              </p>
+              <div class="work__subtext">
+                <span class="work__subtext-item"
+                  ><b>Role:</b> Web Design Intern</span
+                >
+                <span class="work__subtext-item"
+                  ><b>Company:</b> Creative Digital Agency</span
+                >
+              </div>
+              <div class="work__tool-list">
+                <span class="work__tools-heading"><b>Tools:</b></span>
+                <div class="work__tool-item">
+                  <svg class="work__tool-icon">
+                    <use href="./img/icons/figma.svg#img"></use>
+                  </svg>
+                  <span class="work__tool-tooltip">Figma</span>
+                </div>
+              </div>
+            </div>
+            <div class="work__actions">
+              <a
+                href="https://tinyurl.com/inzalab-prototype-desktop"
+                target="_blank"
+              >
+                <button class="work__action-btn btn">View Prototype</button>
+              </a>
+              <a
+                href="https://tinyurl.com/inzalab-prototype-mobile"
+                target="_blank"
+              >
+                <button class="work__action-btn btn-secondary">
+                  View Mobile Version
+                </button>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </section> -->
+    </section>
+    <section id="footer" class="footer">
+      <div class="footer__container container">
+        <div class="footer__brand">
+          <svg class="footer__logo">
+            <use href="./img/logo/logo.svg#img"></use>
+          </svg>
+          <span class="footer__copyright">© 2024 Sheena Gonzalez.</span>
+        </div>
+        <div class="footer__socials">
+          <a
+            class="footer__social-link"
+            href="https://github.com/sheenagonzalez"
+            target="_blank"
+          >
+            <svg class="footer__social-img">
+              <use href="./img/icons/github.svg#img"></use>
+            </svg>
+          </a>
+          <a
+            class="footer__social-link"
+            href="https://www.linkedin.com/in/sheena-gonzalez/"
+            target="_blank"
+          >
+            <svg class="footer__social-img">
+              <use href="./img/icons/linkedin.svg#img"></use>
+            </svg>
+          </a>
+          <a
+            class="footer__social-link"
+            href="https://dribbble.com/shngonzalez"
+            target="_blank"
+          >
+            <svg class="footer__social-img">
+              <use href="./img/icons/dribbble.svg#img"></use>
+            </svg>
+          </a>
+          <a
+            class="footer__social-link"
+            href="https://www.behance.net/sheena-gonzalez"
+            target="_blank"
+          >
+            <svg class="footer__social-img">
+              <use href="./img/icons/behance.svg#img"></use>
+            </svg>
+          </a>
+          <a
+            class="footer__social-link"
+            href="https://www.instagram.com/sheenasketch"
+            target="_blank"
+          >
+            <svg class="footer__social-img">
+              <use href="./img/icons/instagram.svg#img"></use>
+            </svg>
+          </a>
+          <a
+            class="footer__social-link"
+            href="mailto:shngonzalez@gmail.com"
+            target="_blank"
+          >
+            <svg class="footer__social-img">
+              <use href="./img/icons/envelope.svg#img"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

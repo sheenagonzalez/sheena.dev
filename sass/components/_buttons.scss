@@ -10,12 +10,13 @@ https://codepen.io/Zeindelf/pen/vZbyEg
     background-position: 100% 0;
   }
 }
-button,
 .btn {
   @include font-h6-bold;
   cursor: pointer;
   padding: 1rem 2rem 1.5rem;
   background-color: $btn-background;
+  border: 2px solid $border-color;
+  color: $btn-color;
   border-radius: 0.5rem;
   width: 100%;
   margin-bottom: 16px;
@@ -31,13 +32,13 @@ button,
     background-image: repeating-linear-gradient(
       45deg,
       $border-color,
-      $border-color 1px,
+      $border-color 2px,
       transparent 2px,
       transparent 5px
     );
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-top: 1px solid $border-color;
+    border-top: 2px solid $border-color;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -60,16 +61,30 @@ button,
       animation: StripeSlide 12s infinite linear forwards;
     }
   }
+  &-secondary {
+    @include font-label;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    margin-top: 1rem;
+    text-underline-offset: 4px;
+    transition: letter-spacing 0.2s ease-in;
+    &:hover {
+      letter-spacing: 4px;
+    }
+  }
 }
 @include respond-to("lg") {
-  button,
   .btn {
     width: max-content;
     padding: 1rem 6rem 1.5rem;
+    &-secondary {
+      color: $color-light;
+    }
   }
 }
 @include respond-to("xl") {
-  button,
   .btn {
     @include font-h5-bold;
   }

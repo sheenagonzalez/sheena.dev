@@ -1,0 +1,64 @@
+.footer {
+  background-color: $color-gray;
+  box-shadow: inset $color-alt-black 0px 0px 20px -12px;
+  &__container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: end;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    row-gap: 0.5rem;
+  }
+  &__brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+  &__logo {
+    width: 1.25rem;
+    height: 1.5rem;
+  }
+  &__copyright {
+    @include font-c1-regular;
+  }
+  &__socials {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+  }
+  &__social {
+    &-link {
+      color: inherit;
+    }
+    &-img {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: $color-alt-black;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      &:hover {
+        color: $color-primary-dark;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+@include respond-to("md") {
+  .footer {
+    &__container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__brand {
+      width: 50%;
+      justify-content: space-between;
+    }
+    &__logo {
+      width: 1.75rem;
+      height: 2rem;
+    }
+  }
+}

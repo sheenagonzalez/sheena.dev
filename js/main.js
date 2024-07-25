@@ -1,24 +1,33 @@
 window.onload = function () {
-  /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+  const body = document.body;
+  const themeToggle = document.getElementById("themeToggle");
+  const themeToggleContainer = document.getElementById("themeToggleContainer");
   const menuButton = document.getElementById("menuButton");
+  const hamburgerMenu = document.getElementById("hamburgerMenu");
   var prevScrollpos = window.scrollY;
+  const navBar = document.getElementById("nav");
+
+  /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
   window.onscroll = function () {
     var currentScrollPos = window.scrollY;
     if (prevScrollpos > currentScrollPos || menuButton.checked) {
-      document.getElementById("nav").style.top = "0";
+      navBar.style.top = "0";
+      hamburgerMenu.classList.remove("hamburger--dark");
     } else {
-      document.getElementById("nav").style.top = "-72px";
+      navBar.style.top = "-72px";
+
+      if (!themeToggle.checked) {
+        hamburgerMenu.classList.add("hamburger--dark");
+      }
     }
     prevScrollpos = currentScrollPos;
   };
 
   // Dark mode toggle
-  const body = document.body;
-  const themeToggle = document.getElementById("themeToggle");
-  const themeToggleContainer = document.getElementById("themeToggleContainer");
   function toggleTheme() {
     if (themeToggle.checked) {
       body.classList.add("dark-mode");
+      hamburgerMenu.classList.remove("hamburger--dark");
       themeToggleContainer.classList.add("theme-toggle--active");
     } else {
       body.classList.remove("dark-mode");
