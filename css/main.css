@@ -1528,10 +1528,15 @@ https://codepen.io/Zeindelf/pen/vZbyEg
   max-width: 3rem;
 }
 
+.about {
+  background-color: #f1f5f9;
+  box-shadow: inset #121629 0px 0px 20px -12px;
+}
 .about__container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
+  margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 .about__text {
@@ -1572,6 +1577,21 @@ https://codepen.io/Zeindelf/pen/vZbyEg
 
 .works {
   overflow: hidden;
+}
+.works__heading {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 140%;
+  font-variation-settings: "slnt" 0;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
 }
 .works .work {
   display: flex;
@@ -1992,6 +2012,9 @@ https://codepen.io/Zeindelf/pen/vZbyEg
   .about-media__circle--inner {
     width: 35vw;
   }
+  .works__heading {
+    font-size: 0.85rem;
+  }
   .works .work__img {
     padding: 7rem;
   }
@@ -2117,7 +2140,7 @@ https://codepen.io/Zeindelf/pen/vZbyEg
   }
   .about__container {
     grid-template-columns: 2fr 1fr;
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-bottom: 3rem;
   }
   .about__description {
@@ -2310,6 +2333,9 @@ https://codepen.io/Zeindelf/pen/vZbyEg
   .about-media__circle--inner {
     max-width: 360px;
     max-height: 360px;
+  }
+  .works__heading {
+    font-size: 1rem;
   }
   .works .work {
     grid-template-columns: 1.25fr 1fr;
@@ -2585,18 +2611,18 @@ body {
   transition: background 0.2s linear;
 }
 body.dark-mode {
-  background: #232946;
+  background: #121629;
   color: #fffafa;
 }
 body.dark-mode .btn {
-  color: #232946;
+  color: #121629;
   background-color: #eebbc3;
 }
 body.dark-mode .btn:hover {
   background-color: #f2c94c;
 }
 body.dark-mode .btn:hover:after {
-  background-image: repeating-linear-gradient(45deg, #232946, #232946 2px, transparent 2px, transparent 5px);
+  background-image: repeating-linear-gradient(45deg, #121629, #121629 2px, transparent 2px, transparent 5px);
 }
 body.dark-mode .btn-secondary {
   color: #fffafa;
@@ -2624,11 +2650,11 @@ body.dark-mode .home-header__character-simplified--dark {
   display: block;
 }
 body.dark-mode .home-header__speech-bubble {
-  background-color: #232946;
+  background-color: #121629;
   color: #fffafa;
 }
 body.dark-mode .home-header__speech-bubble-tail {
-  color: #232946;
+  color: #121629;
 }
 body.dark-mode .home-header * {
   stroke-width: 2;
@@ -2705,6 +2731,9 @@ body.dark-mode .home-header__plant--leaf * {
 body.dark-mode .home-header__plant--pot * {
   fill: #4b4e75;
 }
+body.dark-mode .clients {
+  background-color: #121629;
+}
 body.dark-mode .clients__logos a:nth-child(2), body.dark-mode .clients__logos a:nth-child(3) {
   filter: invert(1) brightness(100%) saturate(0);
 }
@@ -2717,6 +2746,9 @@ body.dark-mode .clients__logos a:hover:nth-child(2), body.dark-mode .clients__lo
 body.dark-mode .clients__logos a:hover:first-child, body.dark-mode .clients__logos a:hover:nth-child(4), body.dark-mode .clients__logos a:hover:nth-child(5), body.dark-mode .clients__logos a:hover:last-child {
   filter: brightness(0) invert(92%) sepia(54%) saturate(6417%) hue-rotate(320deg) brightness(103%) contrast(90%);
 }
+body.dark-mode .about {
+  background-color: #232946;
+}
 body.dark-mode .works .work__img--desktop.light, body.dark-mode .works .work__img--mobile.light {
   display: none;
 }
@@ -2724,7 +2756,7 @@ body.dark-mode .works .work__img--desktop.dark, body.dark-mode .works .work__img
   display: flex;
 }
 body.dark-mode .works .work__text-bg {
-  background-color: #232946;
+  background-color: #121629;
 }
 body.dark-mode .works .work#proj1 .work__heading, body.dark-mode .works .work#proj2 .work__heading, body.dark-mode .works .work#proj3 .work__heading {
   color: #fffafa;
@@ -2763,7 +2795,7 @@ body.dark-mode .footer__social-img:hover {
 }
 @media (min-width: 992px) {
   .dark-mode .site-navigation .menu__list {
-    background-color: #232946;
+    background-color: #121629;
   }
   .dark-mode .site-navigation .menu__list-item {
     border-bottom: 2px solid #f2c94c;
@@ -2772,6 +2804,6 @@ body.dark-mode .footer__social-img:hover {
     color: #f2c94c;
   }
   .dark-mode .works .work__text-card {
-    background-color: #232946;
+    background-color: #121629;
   }
 }/*# sourceMappingURL=main.css.map */

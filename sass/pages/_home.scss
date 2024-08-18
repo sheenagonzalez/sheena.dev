@@ -184,10 +184,13 @@
   }
 }
 .about {
+  background-color: $color-gray;
+  box-shadow: inset $color-alt-black 0px 0px 20px -12px;
   &__container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
+    margin-top: 1.5rem;
     margin-bottom: 1.5rem;
   }
   &__text {
@@ -229,6 +232,13 @@
 }
 .works {
   overflow: hidden;
+  &__heading {
+    @include font-label;
+    font-size: 0.75rem;
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0;
+  }
   .work {
     display: flex;
     flex-direction: column;
@@ -639,6 +649,9 @@
     }
   }
   .works {
+    &__heading {
+      font-size: 0.85rem;
+    }
     .work {
       &__img {
         padding: 7rem;
@@ -759,7 +772,7 @@
   .about {
     &__container {
       grid-template-columns: 2fr 1fr;
-      margin-top: 2rem;
+      margin-top: 4rem;
       margin-bottom: 3rem;
     }
     &__description {
@@ -978,6 +991,9 @@
     }
   }
   .works {
+    &__heading {
+      font-size: 1rem;
+    }
     .work {
       grid-template-columns: 1.25fr 1fr;
       &__img {

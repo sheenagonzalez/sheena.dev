@@ -3,18 +3,18 @@ body {
   color: $color-alt-black;
   transition: background 0.2s linear;
   &.dark-mode {
-    background: $color-dark;
+    background: $color-alt-black;
     color: $color-light;
     .btn {
-      color: $color-dark;
+      color: $color-alt-black;
       background-color: $color-secondary-dark;
       &:hover {
         background-color: $color-accent;
         &:after {
           background-image: repeating-linear-gradient(
             45deg,
-            $color-dark,
-            $color-dark 2px,
+            $color-alt-black,
+            $color-alt-black 2px,
             transparent 2px,
             transparent 5px
           );
@@ -52,10 +52,10 @@ body {
         }
       }
       &__speech-bubble {
-        background-color: $color-dark;
+        background-color: $color-alt-black;
         color: $color-light;
         &-tail {
-          color: $color-dark;
+          color: $color-alt-black;
         }
       }
       * {
@@ -153,6 +153,7 @@ body {
       }
     }
     .clients {
+      background-color: $color-alt-black;
       &__logos a {
         &:nth-child(2),
         &:nth-child(3) {
@@ -180,6 +181,9 @@ body {
         }
       }
     }
+    .about {
+      background-color: $color-dark;
+    }
     .works {
       .work {
         &__img {
@@ -195,7 +199,7 @@ body {
         }
         &__text {
           &-bg {
-            background-color: $color-dark;
+            background-color: $color-alt-black;
           }
         }
         &#proj1,
@@ -257,7 +261,7 @@ body {
   .dark-mode {
     .site-navigation {
       .menu__list {
-        background-color: $color-dark;
+        background-color: $color-alt-black;
         &-item {
           border-bottom: 2px solid $color-accent;
           &:hover > a {
@@ -270,7 +274,7 @@ body {
       .work {
         &__text {
           &-card {
-            background-color: $color-dark;
+            background-color: $color-alt-black;
           }
         }
       }

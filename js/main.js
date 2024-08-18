@@ -6,6 +6,7 @@ window.onload = function () {
   const hamburgerMenu = document.getElementById("hamburgerMenu");
   var prevScrollpos = window.scrollY;
   const navBar = document.getElementById("nav");
+  const worksNav = document.getElementById("worksNav");
 
   /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
   window.onscroll = function () {
@@ -35,6 +36,10 @@ window.onload = function () {
     }
   }
   themeToggleContainer.addEventListener("click", toggleTheme);
+
+  worksNav.addEventListener("click", () => {
+    menuButton.click();
+  });
 
   var pathname = window.location.pathname;
 
