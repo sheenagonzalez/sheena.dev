@@ -218,6 +218,11 @@ body {
         }
       }
     }
+    .projects {
+      &__text {
+        background-color: $color-alt-black;
+      }
+    }
     .footer {
       background-color: $color-alt-black;
       box-shadow: inset $color-black 0px 0px 20px -12px;
@@ -237,10 +242,10 @@ body {
   }
 }
 @include respond-to("md") {
-  .dark-mode {
+  body.dark-mode {
     .home-header {
       &__speech-bubble {
-        background-color: $color-secondary;
+        background-color: $color-alt-black;
         color: $color-light;
       }
       &__window {
@@ -258,10 +263,10 @@ body {
   }
 }
 @include respond-to("lg") {
-  .dark-mode {
+  body.dark-mode {
     .site-navigation {
       .menu__list {
-        background-color: $color-alt-black;
+        background-color: $color-dark;
         &-item {
           border-bottom: 2px solid $color-accent;
           &:hover > a {
@@ -277,6 +282,11 @@ body {
             background-color: $color-alt-black;
           }
         }
+      }
+    }
+    .projects {
+      &__text {
+        background-color: $color-dark;
       }
     }
   }

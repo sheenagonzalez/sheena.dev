@@ -1764,6 +1764,51 @@ https://codepen.io/Zeindelf/pen/vZbyEg
   color: #353638;
 }
 
+.projects__heading {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 140%;
+  font-variation-settings: "slnt" 0;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
+}
+.projects__container {
+  display: flex;
+  flex-direction: column;
+}
+.projects__img {
+  width: 100%;
+  height: 100%;
+}
+.projects__text {
+  max-width: none;
+  padding-right: 16px;
+  padding-left: 16px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #fffafa;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.projects__description {
+  margin: 0.75rem 0;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  font-variation-settings: "slnt" 0;
+}
+
 @media (min-width: 576px) {
   .home-header__heading {
     font-family: "Source Serif 4", serif;
@@ -2033,6 +2078,9 @@ https://codepen.io/Zeindelf/pen/vZbyEg
   .works .work__tool-list {
     column-gap: 1rem;
   }
+  .projects__heading {
+    font-size: 0.85rem;
+  }
 }
 @media (min-width: 992px) {
   .home-header {
@@ -2267,6 +2315,56 @@ https://codepen.io/Zeindelf/pen/vZbyEg
   .works #proj3 .work__action-btn {
     color: #121629;
   }
+  .projects__container {
+    max-width: 960px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    padding-bottom: 3rem;
+  }
+  .projects__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  .projects__text {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    background-color: #f1f5f9;
+    transition: transform 0.5s;
+    transform: translateY(100%);
+  }
+  .projects__img {
+    transition: transform 0.5s;
+  }
+  .projects__img:hover {
+    transform: scale(1.05);
+  }
+  .projects__img:hover + .projects__text {
+    transform: translateY(0);
+  }
+  .projects__title {
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+  }
+  .projects__description {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    font-variation-settings: "slnt" 0;
+  }
 }
 @media (min-width: 1200px) {
   .home-header {
@@ -2354,6 +2452,21 @@ https://codepen.io/Zeindelf/pen/vZbyEg
   }
   .works .work__actions {
     left: -5rem;
+  }
+  .projects__heading {
+    font-size: 1rem;
+  }
+  .projects__container {
+    max-width: 1140px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    padding-bottom: 4rem;
+  }
+  .projects__text {
+    padding: 1.25rem 2rem 0.75rem;
   }
 }
 @media (min-width: 1400px) {
@@ -2514,6 +2627,14 @@ https://codepen.io/Zeindelf/pen/vZbyEg
   .works .work__actions {
     left: initial;
     right: 5rem;
+  }
+  .projects__container {
+    max-width: 1320px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    column-gap: 3rem;
+    row-gap: 3rem;
   }
 }
 @media (min-width: 2400px) {
@@ -2764,6 +2885,9 @@ body.dark-mode .works .work#proj1 .work__heading, body.dark-mode .works .work#pr
 body.dark-mode .works .work#proj1 .work__tool-icon, body.dark-mode .works .work#proj2 .work__tool-icon, body.dark-mode .works .work#proj3 .work__tool-icon {
   color: #fffafa;
 }
+body.dark-mode .projects__text {
+  background-color: #121629;
+}
 body.dark-mode .footer {
   background-color: #121629;
   box-shadow: inset #000000 0px 0px 20px -12px;
@@ -2779,31 +2903,34 @@ body.dark-mode .footer__social-img:hover {
 }
 
 @media (min-width: 768px) {
-  .dark-mode .home-header__speech-bubble {
-    background-color: #fec7d7;
+  body.dark-mode .home-header__speech-bubble {
+    background-color: #121629;
     color: #fffafa;
   }
-  .dark-mode .home-header__window--sun {
+  body.dark-mode .home-header__window--sun {
     display: none;
   }
-  .dark-mode .home-header__window--moon {
+  body.dark-mode .home-header__window--moon {
     display: block;
   }
-  .dark-mode .home-header__btn {
+  body.dark-mode .home-header__btn {
     color: #fffafa;
   }
 }
 @media (min-width: 992px) {
-  .dark-mode .site-navigation .menu__list {
-    background-color: #121629;
+  body.dark-mode .site-navigation .menu__list {
+    background-color: #232946;
   }
-  .dark-mode .site-navigation .menu__list-item {
+  body.dark-mode .site-navigation .menu__list-item {
     border-bottom: 2px solid #f2c94c;
   }
-  .dark-mode .site-navigation .menu__list-item:hover > a {
+  body.dark-mode .site-navigation .menu__list-item:hover > a {
     color: #f2c94c;
   }
-  .dark-mode .works .work__text-card {
+  body.dark-mode .works .work__text-card {
     background-color: #121629;
+  }
+  body.dark-mode .projects__text {
+    background-color: #232946;
   }
 }/*# sourceMappingURL=main.css.map */
