@@ -7,6 +7,7 @@ window.onload = function () {
   var prevScrollpos = window.scrollY;
   const navBar = document.getElementById("nav");
   const worksNav = document.getElementById("worksNav");
+  const projectsNav = document.getElementById("projectsNav");
 
   /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
   window.onscroll = function () {
@@ -38,6 +39,9 @@ window.onload = function () {
   themeToggleContainer.addEventListener("click", toggleTheme);
 
   worksNav.addEventListener("click", () => {
+    menuButton.click();
+  });
+  projectsNav.addEventListener("click", () => {
     menuButton.click();
   });
 
