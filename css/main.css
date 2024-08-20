@@ -2221,6 +2221,7 @@ https://codepen.io/Zeindelf/pen/vZbyEg
   }
   .works .work:first-child {
     margin-top: 0;
+    height: 60rem;
   }
   .works .work__img {
     padding: 3rem;
