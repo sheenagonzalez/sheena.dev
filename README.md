@@ -1,8 +1,8 @@
 # Welcome
 
-I'm Sheena, a Software Engineer with a passion for interactive UX/UI design and building code with optimal efficiency. I graduated from UC Berkeley with a degree in Cognitive Science and a minor in Computer Science. As a Front-End Developer/Designer, I have experience interning under a NASA-affiliated agency for a few months and working under a lifestyle/beauty e-commerce brand for 3 years. Currently, I'm focusing on learning new skills and pursuing personal projects.
+I'm Sheena, a Software Engineer with a passion for interactive UX/UI design and building code with optimal efficiency. I graduated from UC Berkeley with a degree in Cognitive Science and a minor in Computer Science. Seeing my work come to life on screen, beautifying and improving the digital world is is so satisfying, and the reason I continue in this line of work.
 
-Seeing my work come to life on screen, beautifying and improving the digital world is what drives me forward in this career. Thank you for taking the time to view my work!
+Find me learning new skills and pursuing personal projects here. Thank you for taking the time to view my work!
 
 ## 🛠️ Skills
 
