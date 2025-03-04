@@ -4,13 +4,6 @@ I'm Sheena, a Software Engineer with a passion for interactive UX/UI design and 
 
 Seeing my work come to life on screen, beautifying and improving the digital world is what drives me forward in this career. Thank you for taking the time to view my work!
 
-### 📫 You can find me here:
-<div display="flex">
-  <a href="https://www.linkedin.com/in/sheena-gonzalez/">
-    <img src="https://img.icons8.com/fluency/36/null/linkedin.png" alt="LinkedIn"/>
-  </a>
-</div>
-
 ## 🛠️ Skills
 
 <table>
@@ -93,3 +86,11 @@ Seeing my work come to life on screen, beautifying and improving the digital wor
 <a href="https://github.com/sheenagonzalez">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sheenagonzalez&title_color=ffffff&text_color=ffffff&bg_color=1d1f21&langs_count=5" alt="Sheena's Language Stats"/>
 </a>
+
+
+### 📫 Connect on LinkedIn
+<div display="flex">
+  <a href="https://www.linkedin.com/in/sheena-gonzalez/">
+    <img src="https://img.icons8.com/fluency/36/null/linkedin.png" alt="LinkedIn"/>
+  </a>
+</div>
