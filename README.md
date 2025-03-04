@@ -93,6 +93,3 @@ Seeing my work come to life on screen, beautifying and improving the digital wor
 <a href="https://github.com/sheenagonzalez">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sheenagonzalez&title_color=ffffff&text_color=ffffff&bg_color=1d1f21&langs_count=5" alt="Sheena's Language Stats"/>
 </a>
-<a href="https://github.com/sheenagonzalez">
-  <img src="https://github-readme-stats.vercel.app/api?username=sheenagonzalez&show_icons=true&line_height=27&count_private=true&title_color=ffffff&text_color=ffffff&icon_color=aee2f2&bg_color=1d1f21&ring_color=aee2f2" alt="Sheena's GitHub Stats" />
-</a>
